@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { getAuth, updateProfile } from "firebase/auth";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import {
   collection,
   deleteDoc,
@@ -112,6 +112,19 @@ const Profile = () => {
               </p>
             </div>
           </form>
+          <button
+            type="submit"
+            className="w-full bg-blue-600 text-white font-medium uppercase px-7 py-3 text-sm transition duration-150 ease-in-out hover:shadow-lg  rounded shadow-md hover:bg-blue-700 active:bg-blue-800"
+          >
+            <Link
+              to="/create-listing"
+              className="flex justify-center items-center gap-2"
+            >
+              {" "}
+              <FcHome className="text-3xl p-1 border-2 bg-red-200 rounded-full" />
+              Sell or Rent your home
+            </Link>
+          </button>
         </div>
       </section>
     </>
